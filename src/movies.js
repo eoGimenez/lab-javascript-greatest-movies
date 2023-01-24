@@ -70,14 +70,18 @@ function orderByYear(moviesArray) {
 function orderAlphabetically(moviesArray) {
     let alphaArr = Array.from(moviesArray);
     let titlesArr = [];
-    let menorVeinte = [];
+    alphaArr.forEach((title) => {
+        titlesArr.push(title.title);
+    })
+    return titlesArr.sort().slice(0, 20);
+/*     let menorVeinte = [];
     alphaArr.sort((a,b) => {
         return a.title.localeCompare(b.title);
     });
     titlesArr = alphaArr.map((movie) => {
         return movie.title;
     });
-    return titlesArr;
+    return titlesArr; */
 /*     let newArr = [...moviesArray]
     let titlesArr = []
     newArr.sort((a,b) => {
